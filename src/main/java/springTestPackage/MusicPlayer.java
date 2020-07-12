@@ -11,9 +11,15 @@ public class MusicPlayer {
     private Music music;
     private String name;
     private int volume;
+
     public String getName() {
         return name;
     }
+
+    public MusicPlayer(Music music) {
+        this.music = music;
+    }
+
     public void initMy(){
         System.out.println("This is init method of Music class");
     }
@@ -39,29 +45,10 @@ public class MusicPlayer {
         this.music = music;
     }
     public void playMusic(){
-        System.out.println("Now playing " + music.getSong());
+        System.out.println("Now playing: " + music.getSong());
     }
 
 
-
-
-    /*public void setMusicList(List<Music> music) {
-
-        this.music = music;
-    }*/
-
-    /*public void playListMusic() {
-        Iterator<Music> iterator = music.iterator();
-        while (iterator.hasNext()) {
-            String outText = iterator.next().getSong();
-            System.out.println("Now playing:  " + outText);
-        }
-        for (Music mus : music
-        ) {
-            System.out.println("Now play:  " + mus.getSong());
-        }
-
-    }*/
 
 
 }
